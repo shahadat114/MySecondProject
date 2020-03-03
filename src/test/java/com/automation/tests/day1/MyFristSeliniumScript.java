@@ -11,5 +11,6 @@ public class MyFristSeliniumScript {
         ChromeDriver driver = new ChromeDriver();
         //open some website
         driver.get("http://google.com");
+
     }
 }
