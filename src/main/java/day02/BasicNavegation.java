@@ -12,7 +12,7 @@ class BasicNavigation {
         //to start selenium script we need:
         //setup webdriver (browser driver) and create webdriver object
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+         ChromeDriver driver = new ChromeDriver();
         //In selenium, everything starts from WebDriver interface'
         //ChromeDriver extends RemoteWebDriver --> implements WebDriver
         driver.get("http://google.com");//to open a website
