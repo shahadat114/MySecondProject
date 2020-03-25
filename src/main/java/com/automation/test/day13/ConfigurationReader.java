@@ -1,4 +1,5 @@
-package com.automation.utilities;
+package com.automation.test.day13;
+
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -8,12 +9,11 @@ public class ConfigurationReader {
     //ConfigurationReader class ==> we need this class to load and to use configuration file
     //to get configuration.properties => call getProperty method
     //Static block will execute once class is referenced,
-    //static method is on demand
-    private static Properties configFile;
-    static {
-        try {
+    //static method is on demandpri
+private static Properties configFile;
+static  { try {
             //location of properties file
-            String path = System.getProperty("user.dir")+"/configuration.properties";
+            String path = System.getProperty("user.dir") + "/configuration.properties";
             //get that file as a stream
             FileInputStream input = new FileInputStream(path);
             //create object of Properties class
@@ -27,12 +27,14 @@ public class ConfigurationReader {
             throw new RuntimeException("Failed to load properties file!");
         }
     }
+
     /**
      * This method returns property value from configuration.properties file
+     *
      * @param keyName property name
      * @return property value
      */
     public static String getProperty(String keyName) {
         return configFile.getProperty(keyName);
-    }
 ​}
+}
